@@ -9,4 +9,9 @@ public class WelcomeController {
 	public String welcome() {
 		return "welcome";
 	}
+	
+	@RequestMapping("/welcome/index")
+	public String index() {
+		return "index";
+	}
 }

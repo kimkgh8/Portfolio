@@ -2,8 +2,7 @@
 <html>
 <head>
 <body>
-	WelCome.
-	<div><a href="index">소개입니다.</a></div>
+	안녕하세요
 </body>
 </head>
 
