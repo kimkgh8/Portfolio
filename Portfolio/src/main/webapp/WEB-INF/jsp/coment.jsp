@@ -7,7 +7,7 @@
 </head>
 <body>
 <header>
-	<div><a href="index">모든메뉴</a></div>
+	<div><a href="www.naver.com">모든메뉴</a></div>
 </header>
 
 <div class="main">

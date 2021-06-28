@@ -7,7 +7,7 @@
 </head>
 <body>
 <header>
-	<div><a href="index">프로젝트명(예:문서관리프로젝트)</a></div>
+	<div><a href=projectName>프로젝트명(예:문서관리프로젝트)</a></div>
 </header>
 
 <div class="main">

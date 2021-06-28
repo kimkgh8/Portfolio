@@ -15,17 +15,20 @@ public class WelcomeController {
 		return "index";
 	}
 	
-	@RequestMapping("/welcome/index/project")
+	//@RequestMapping("/welcome/index/project")
+	@RequestMapping("/welcome/project")
 	public String project() {
 		return "project";
 	}
 	
-	@RequestMapping("/welcome/index/project/project2")
-	public String project2() {
-		return "project2";
+	//@RequestMapping("/welcome/index/project/projectName")
+	@RequestMapping("/welcome/projectName")
+	public String projectName() {
+		return "projectName";
 	}
 	
-	@RequestMapping("/welcome/index/project/project2/coment")
+	//@RequestMapping("/welcome/index/project/projectName/coment")
+	@RequestMapping("/welcome/coment")
 	public String coment() {
 		return "coment";
 	}
