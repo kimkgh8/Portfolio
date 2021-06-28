@@ -2,16 +2,16 @@
 <html>
 <head>
 <title>
-자기소개
+프로젝트명
 </title>
 </head>
 <body>
 <header>
-	<div><a href="project">프로젝트</a></div>
+	<div><a href="coment">cantact me </a></div>
 </header>
 
 <div class="main">
-	자기소개 내용
+	프로젝트내용 서술
 </div>
 
 <footer>

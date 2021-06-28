@@ -2,16 +2,16 @@
 <html>
 <head>
 <title>
-자기소개
+명언
 </title>
 </head>
 <body>
 <header>
-	<div><a href="project">프로젝트</a></div>
+	<div><a href="index">모든메뉴</a></div>
 </header>
 
 <div class="main">
-	자기소개 내용
+	방명록
 </div>
 
 <footer>

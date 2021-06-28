@@ -2,16 +2,16 @@
 <html>
 <head>
 <title>
-자기소개
+프로젝트명
 </title>
 </head>
 <body>
 <header>
-	<div><a href="project">프로젝트</a></div>
+	<div><a href="index">프로젝트명(예:문서관리프로젝트)</a></div>
 </header>
 
 <div class="main">
-	자기소개 내용
+	일본에서의 경험한 내용 간단히 서술
 </div>
 
 <footer>
