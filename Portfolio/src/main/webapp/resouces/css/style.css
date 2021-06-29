@@ -5,3 +5,10 @@
 #hello2 {
   color: green;
 }
+@font-face {
+	font-family: "base font";
+	src : url("../font/ON 월인석보L.ttf") format('truetype');
+}
+p {
+	font-family : "base font";
+}

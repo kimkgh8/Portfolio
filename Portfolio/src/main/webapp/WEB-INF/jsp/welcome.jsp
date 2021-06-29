@@ -14,13 +14,15 @@ WelCome.
 </header>
 
 <div class="main">
-	<p id='hello1'>나의 모토</p> 
-	
+	<p id='hello1'>컴퓨터는 거짓말을 하지 않는다.</p> 
+	<p id='hello1'>개발자의 길을 걸으면서 들은 생각입니다. 소스 안에 항상 답이 있다.</p> 
 </div>
 
 <footer>
 	<div class="footer">
-		<p>깃허브주소, 전화번호, 김근호</p>
+		<p>https://github.com/kimkgh8</p>
+		 <p>010-2702-2431</p>
+		 <p>Kim Geunho</p>
 	</div>
 </footer>
 </body>
