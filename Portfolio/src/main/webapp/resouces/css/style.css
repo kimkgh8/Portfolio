@@ -1,14 +1,46 @@
-#hello1 {
-  color: red;
-  background-color: yellow;
-}
-#hello2 {
-  color: green;
-}
 @font-face {
 	font-family: "base font";
-	src : url("../font/ON 월인석보L.ttf") format('truetype');
+	src : url("../font/HMFMMUEX.TTC") format('truetype');
 }
-p {
-	font-family : "base font";
+header{
+	width: 100%;
+	height: 100px;
+	background-color: none;
+	border: none;	
+	margin: 10px autog;
+}
+main{
+	background-color: none; 
+	width: 60%; height: 150px; 
+	margin-left: 20%;margin-right: 20%;
+	margin-bottom: 50px;
+}
+
+footer{
+	border: none;
+	width:100%;
+	height: 100px;
+	background-color: none;
+}
+.welcome-body {
+  font-family : "base font";
+  position: relative;
+  font-weight: bold;
+}
+.welcome-body::before{
+        content: "";
+        background-image : url("../image/basebackground.jpg");
+        background-size: cover;
+        opacity: 0.3;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+}
+.welcome-body h1{
+color: rgb(121, 68, 219);
+text-align: center;
+line-height: 300px;  
+position: relative;
 }
