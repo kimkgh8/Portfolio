@@ -9,21 +9,33 @@ WelCome.
 </title>
 </head>
 <body class="welcome-body">
-<header>
-	<a href="index">김 근호</a>
-</header>
-
-<main>
-	<p>컴퓨터는 거짓말을 하지 않는다.</p> 
-	<p>개발자의 길을 걸으면서 들은 생각입니다. 소스 안에 항상 답이 있다고 생각합니다.</p> 
-</main>
-
-<footer>
-	<div class="footer">
-		<p>https://github.com/kimkgh8</p>
-		 <p>010-2702-2431</p>
-		 <p>Kim Geunho</p>
+<div id="jb-container">
+	<div id="jb-header">
+		 <h1><a href="index">김 근호</a> </h1>
 	</div>
-</footer>
+	
+	<div id="jb-content">
+		<p>컴퓨터는 거짓말을 하지 않는다.</p> 
+	<p>개발자의 길을 걸으면서 들은 생각입니다. 소스 안에 항상 답이 있다고 생각합니다.</p> 
+	</div>
+	
+	<div id="jb-sidebar">
+        <h2>Sidebar</h2>
+        <ul>
+          <li>Lorem</li>
+          <li>Ipsum</li>
+          <li>Dolor</li>
+        </ul>
+     </div>
+     <div id="jb-footer">
+     <!-- 아이콘으로해서 마우스 클릭시 복사되도록하기(마우스 온 되면 팝업으로 아래의 내용 표시) -->
+     	<p>https://github.com/kimkgh8</p>
+		<p>010-2702-2431</p>
+		<p>Kim Geunho</p>
+     
+     </div>
+      
+      	
+</div>
 </body>
 </html>
