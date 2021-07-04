@@ -37,4 +37,8 @@ public class WelcomeController {
 	public String ex() {
 		return "ex";
 	}
+	@RequestMapping("/ex2")
+	public String ex2() {
+		return "ex2";
+	}
 }

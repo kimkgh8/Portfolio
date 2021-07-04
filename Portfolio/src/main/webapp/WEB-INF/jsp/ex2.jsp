@@ -1,6 +1,16 @@
-
-window.onload = function () {
-            var elm = ".jb-content";
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>MouseWheel</title>
+    <style type="text/css">
+        html,body{ margin:0; padding:0; width:100%; height:100%;}
+        .box{ width:100%; height:100%; position:relative; color:#ffffff; font-size:24pt;}
+    </style>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            var elm = ".box";
             $(elm).each(function (index) {
                 // 개별적으로 Wheel 이벤트 적용
                 $(this).on("mousewheel DOMMouseScroll", function (e) {
@@ -41,3 +51,15 @@ window.onload = function () {
                 });
             });
         }
+    </script>
+</head>
+<body>
+    <div class="box" style="background-color:red;">1</div>
+    <div class="box" style="background-color:orange;">2</div>
+    <div class="box" style="background-color:yellow;">3</div>
+    <div class="box" style="background-color:green;">4</div>
+    <div class="box" style="background-color:blue;">5</div>
+    <div class="box" style="background-color:indigo;">6</div>
+    <div class="box" style="background-color:violet;">7</div>
+</body>
+</html>
