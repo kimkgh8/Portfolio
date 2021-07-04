@@ -32,4 +32,9 @@ public class WelcomeController {
 	public String coment() {
 		return "coment";
 	}
+	
+	@RequestMapping("/ex")
+	public String ex() {
+		return "ex";
+	}
 }
