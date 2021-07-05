@@ -20,15 +20,19 @@
 	<script> 
 		AOS.init(); 
     </script>
-	<div data-aos = "flip-up" class="jb-content">
+	<div data-aos="flip-up" class="jb-content">
 		<div class="jb-container">
 
 			<div class="jb-header">
 				<h1>놀땐 놀고 할땐 하자</h1>
 			</div>
 			<div class="jb-main">
-				<p>컴퓨터는 거짓말을 하지 않는다.</p>
-				<p>개발자의 길을 걸으면서 들은 생각입니다. 소스 안에 항상 답이 있다고 생각합니다.</p>
+				<img src="../../resouces/image/codeImage.jpg" /><br /> <br />
+				<p>
+					컴퓨터는 거짓말을 하지 않는다. <br /> <br /> <small>개발자의 길을 걸으면서 들은
+						생각입니다. 소스 안에 항상 답이 있다고 생각 합니다.</small>
+				</p>
+
 			</div>
 			<div class="jb-footer">
 				<div class="container" id="icons">
@@ -56,13 +60,43 @@
 		</div>
 	</div>
 
-	<div data-aos = "flip-up" class="jb-content">
+	<div class="jb-content">
 		<div class="jb-container">
 			<div class="jb-header">
 				<h1>Project</h1>
 			</div>
 			<div class="jb-main">
-				<p>개발자의 길을 걸으면서 들은 생각입니다. 소스 안에 항상 답이 있다고 생각합니다.</p>
+				<p>
+					문서 관리 시스템<br /> <br /> <small> 제품 사양 정보에 대한 문서들을 관리하는
+						시스템. <br />
+					</small><small>현행 시스템은 비주얼베이직이였기 때문에 기능을 java로 리뉴얼하는 프로젝트였습니다. <br />
+					</small><small>프론트트엔드는 일본의 한 업체의 패키지를 이용하고 java의 API를 개발하였습니다.<br />
+						<br />
+						<h2>■ 담당 업무</h2>
+						<ul>
+							<li>신규 프로젝트라고 생각해도 될 정도로 정보가 없었기 때문에 기능을 사용할 수있는지의 검증 및 테스트를
+								하였습니다.</li>
+							<li>설계서 작성 후 코딩, 단위 테스트</li>
+							<li>결합 테스트의 결함 조사, 대응</li>
+							<li>API기능의 전반적인 내용을 파악하고 있기 때문에 고객과의 문의도 담당하였습니다.</li>
+
+						</ul>
+						<h2>■ 환경</h2>
+						<ul>
+							<li>OS : Windows</li>
+							<li>DB : Oracle 12c</li>
+							<li>언어 : Java</li>
+							<li>툴 : Eclipse</li>
+						</ul>
+					</small>
+					<button data-aos="zoom-in" class="jb-main-button" onclick="showPopup(false)"><span>주요 API</span></button>
+				<div id="popup" class="hide">
+					<div class="content">
+						여기에 팝업창 내용이 나타납니다.
+						<button data-aos="zoom-out" class="jb-main-button-close" onclick="closePopup()">X</button>
+					</div>
+				</div>
+
 			</div>
 			<div class="jb-footer">
 				<div class="container" id="icons">

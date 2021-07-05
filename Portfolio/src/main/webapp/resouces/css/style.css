@@ -1,48 +1,154 @@
-a { 
-  color: #000;
-  text-decoration: none;
+a {
+	color: #000;
+	text-decoration: none;
 }
+
+.jb-main img {
+	vertical-align: middle;
+	border-style: none;
+	width: 600px;
+	height: auto;
+	opacity: 0.6;
+	box-shadow: 0px 0px 20px #000;
+	border-radius: 5px;
+}
+
+.jb-main li {
+	font-size: 16px;
+	font-weight: 5px;
+	line-height: 30px;
+}
+
 @font-face {
 	font-family: "base font";
-	src : url("../font/HMFMMUEX.TTC") format('truetype');
+	src: url("../font/HMFMMUEX.TTC") format('truetype');
 }
 
 .welcome-body {
-  font-family : "base font";
-  position: relative;
-  font-weight: bold;
-  background-size: cover;
+	font-family: "base font";
+	position: relative;
+	font-weight: bold;
+	background-size: cover;
 }
 
 .jb-content {
-  width: 100%; height: 100%;
-  padding: 20px;
-  margin-bottom: 20px;
-  float: left;
-  position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	margin-bottom: 20px;
+	float: left;
+	position: relative;
 }
+
 .jb-container {
-  width: 940px;
-  margin: 10px auto;
-  padding: 20px;
-  border: 1px solid #bcbcbc;
+	width: 1000px;
+	height: 100%;
+	margin: 10px auto;
+	padding: 20px;
+	border: 1px solid #bcbcbc;
+	margin: 10px auto
 }
+
 .jb-header {
-  padding: 20px;
-  margin-bottom: 20px;
-  border: none;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: none;
 }
 
 .jb-main {
-  width: 580px;
-  padding: 20px;
-  margin-bottom: 20px;
-  float: left;
-  border: none;
+	width: 900px;
+	height: 70%;
+	padding: 20px;
+	margin-bottom: 20px;
+	float: left;
+	border: none;
 }
 
 .jb-footer {
-  clear: both;
+	clear: both;
+	padding: 20px;
+	border: none;
+}
+
+.jb-main-button {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 15px;
+	background-color: gray;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 15px;
+	font-weight:bolder;
+	padding: 10px;
+	width: 110px;
+	transition: all 0.5s;
+	margin: 5px;
+}
+.jb-main-button-close {
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 15px;
+	background-color: gray;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 15px;
+	font-weight:bolder;
+	padding: 10px;
+	width: 50px;
+	transition: all 0.5s;
+	margin: 5px;
+}
+.jb-main-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.jb-main-button span:after {
+  content: '는?';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.jb-main-button:hover span {
+  padding-right: 25px;
+}
+
+.jb-main-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+#popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 1;
+}
+
+#popup.hide {
+  display: none;
+}
+
+#popup.has-filter {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#popup .content {
   padding: 20px;
-  border: none;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, .3);
 }
