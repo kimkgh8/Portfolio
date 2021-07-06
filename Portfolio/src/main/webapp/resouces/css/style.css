@@ -29,15 +29,16 @@ a {
 	position: relative;
 	font-weight: bold;
 	background-size: cover;
+	background-repeat : no-repeat;
+	background-image: url("../image/background.png")
 }
 
 .jb-content {
 	width: 100%;
 	height: 100%;
-	padding: 20px;
-	margin-bottom: 20px;
 	float: left;
 	position: relative;
+
 }
 
 .jb-container {
@@ -45,7 +46,7 @@ a {
 	height: 100%;
 	margin: 10px auto;
 	padding: 20px;
-	border: 1px solid #bcbcbc;
+	border: 0px solid #bcbcbc;
 	margin: 10px auto
 }
 
