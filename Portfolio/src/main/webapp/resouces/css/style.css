@@ -30,7 +30,9 @@ a {
 	font-weight: bold;
 	background-size: cover;
 	background-repeat : no-repeat;
-	background-image: url("../image/background.png")
+	background-image: url("../image/background.png");
+	height: 100vh;
+	background-position: center;
 }
 
 .jb-content {
