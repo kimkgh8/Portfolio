@@ -27,12 +27,13 @@
 				<h1>놀땐 놀고 할땐 하자</h1>
 			</div>
 			<div class="jb-main">
-				<img src="../../resouces/image/codeImage.jpg" /><br /> <br />
+				<img class = "jb-mainImg" src="../../resouces/image/codeImage.jpg" /><br /> <br />
 				<p>
 					컴퓨터는 거짓말을 하지 않는다. <br /> <br /> <small>개발자의 길을 걸으면서 들은
 						생각입니다. 소스 안에 항상 답이 있다고 생각 합니다.</small>
-				</p>
-
+				</p><br/><br/>
+				
+			<img src="https://fontmeme.com/permalink/210708/401164043f2cc79e7fa1c63d51ac190c.png" alt="cursive-type" border="0"></a>
 			</div>
 			<div class="jb-footer">
 				<div class="container" id="icons">

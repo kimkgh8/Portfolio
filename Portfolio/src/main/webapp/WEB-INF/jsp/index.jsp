@@ -28,10 +28,10 @@
 			</div>
 			<div class="jb-main">
 				<p>
-					<span>장점 : 성실함, 집중력</span><br/><br/>
-					<span>단점 : 응용력 부족</span><br/><br/>
-					<span>단점을 극복하기 위해 필요한 과제 : 다방면으로 보는 시각을 키우자</span><br/><br/>
-					<span>프로젝트에 참가하면 내 담당 뿐만아니고 전체적인 흐름을 이해하고 시각화.</span>
+					<small>장점 : 성실함, 집중력</small><br/><br/>
+					<small>단점 : 응용력 부족</small><br/><br/>
+					<small>단점을 극복하기 위해 필요한 과제 : 다방면으로 보는 시각을 키우자</small><br/><br/>
+					<small>프로젝트에 참가하면 내 담당 뿐만아니고 전체적인 흐름을 이해하고 시각화.</small>
 				</p>
 
 			</div>
