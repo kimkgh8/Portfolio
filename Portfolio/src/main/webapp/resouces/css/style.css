@@ -19,6 +19,11 @@ a {
 	line-height: 30px;
 }
 
+.jb-main-foint {
+	font-size: 16px;
+	font-weight: bolder;
+}
+
 @font-face {
 	font-family: "base font";
 	src: url("../font/HMFMMUEX.TTC") format('truetype');

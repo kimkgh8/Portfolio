@@ -208,14 +208,14 @@
 					</small><small>한국에서 1년 정도 교육을 받고 처음 참가하게된 프로젝트<br />
 					</small><small>설계서 작성을 시작으로 코딩, 테스트를 하는 애자일 방식의 개발 프로젝트였습니다.<br />
 					</small><small>개발 단계로써는 1차 개발이 끝나고 그 이후의 개발단계였기 때문에, 성능에 대한 부분도
-						고려했어야 했기 때문에 처리의 성능 확인 및 SQL의 성능을 확인하는 작업도 했던 기억이 있습 니다.<br /> <br />
+						고려했어야 했기 때문에 처리의 성능 확인 및 SQL의 성능을 확인하는 작업도 했던 기억이 있습니다.<br /> <br />
 						<h2>■ 담당 업무</h2>
 						<ul>
 							<li>카드 결제 관련 기능을 개발 및 테스트</li>
 						</ul>
 						<h2>■ 환경</h2>
 						<ul>
-							<li>OS : Windows、Linux</li>
+							<li>OS : Windows, Linux</li>
 							<li>DB : Oracle 11g</li>
 							<li>언어 : Java, HTML, JavaScript</li>
 							<li>툴 : JSP, Junit, Eclipse, Github, Jmeter</li>
