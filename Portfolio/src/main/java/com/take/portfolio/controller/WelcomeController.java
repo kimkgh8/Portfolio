@@ -41,4 +41,8 @@ public class WelcomeController {
 	public String ex2() {
 		return "ex2";
 	}
+	@RequestMapping("/welcome/board")
+	public String board() {
+		return "board";
+	}
 }
