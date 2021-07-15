@@ -2,15 +2,15 @@ package com.take.portfolio.mapper;
 
 import java.util.List;
 
-import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
-import com.take.portfolio.dto.BoardDto;
+import com.take.portfolio.dao.BoardDao;
  
-@Mapper
+@Repository("BoardMapper")
 public interface BoardMapper {
-	
-	int selectBoardListCnt() throws Exception;
-	
-	List<BoardDto> selectBoardList() throws Exception;
+    public boolean addBoard(BoardDao b);
+    public List<BoardDao> getBoard();
+    //public boolean addReply(Reply r);
+    //public List<Reply> getReply(int boardIdx);
 	
 }

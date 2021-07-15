@@ -1,10 +1,22 @@
 package com.take.portfolio.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import com.take.portfolio.dao.BoardDao;
+import com.take.portfolio.service.BoardService;
 
 @Controller
 public class WelcomeController {
+	
+	@Autowired
+    private BoardService s;
+	
 	@RequestMapping("/welcome")
 	public String welcome() {
 		return "welcome";
@@ -45,4 +57,10 @@ public class WelcomeController {
 	public String board() {
 		return "board";
 	}
+	
+	@RequestMapping(value="/boardList", method=RequestMethod.GET)
+    @ResponseBody
+    public List<BoardDao> boardList(){
+        return s.getBoard();
+    }
 }
