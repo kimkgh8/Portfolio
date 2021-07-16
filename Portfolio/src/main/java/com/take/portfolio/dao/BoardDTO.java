@@ -2,7 +2,7 @@ package com.take.portfolio.dao;
 
 import java.sql.Date;
 
-public class BoardDao {
+public class BoardDTO {
 
 	private static final long serialVersionUID = 1L;
 	private String title;
@@ -26,8 +26,6 @@ public class BoardDao {
 		this.date = date;
 	}
 
-	public BoardDao() {
-	}
 
 	public String getTitle() {
 		return title;
@@ -43,13 +41,5 @@ public class BoardDao {
 
 	public void setContents(String contents) {
 		this.contents = contents;
-	}
-
-	public BoardDao(String title, String contents, String reg_id, Date date) {
-		super();
-		this.title = title;
-		this.contents = contents;
-		this.reg_id = reg_id;
-		this.date = date;
 	}
 }
