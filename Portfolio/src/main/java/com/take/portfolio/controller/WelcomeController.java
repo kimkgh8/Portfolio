@@ -1,12 +1,20 @@
 package com.take.portfolio.controller;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.take.portfolio.service.BoardService;
 
 
 @Controller
 public class WelcomeController {
+	
+	@Autowired
+	private BoardService boardService;
 	
 	@RequestMapping("/welcome")
 	public String welcome() {
@@ -47,5 +55,18 @@ public class WelcomeController {
 	@RequestMapping("/welcome/board")
 	public String board() {
 		return "board";
+	}
+	
+	@GetMapping(value = "/welcome/board/write.do")
+	public String openBoardWrite(Model model) {
+		String title = "제목";
+		String content = "내용";
+		String writer = "홍길동";
+
+		model.addAttribute("t", title);
+		model.addAttribute("c", content);
+		model.addAttribute("w", writer);
+
+		return "board/write";
 	}
 }
