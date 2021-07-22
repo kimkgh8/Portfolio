@@ -52,12 +52,13 @@ public class WelcomeController {
 	public String ex2() {
 		return "ex2";
 	}
-	@RequestMapping("/welcome/board")
-	public String board() {
-		return "board";
-	}
 	
-	@GetMapping(value = "/welcome/board/write.do")
+	//@RequestMapping("/welcome/comment")
+	//public String board() {
+	//	return "comment";
+	//}
+	
+	@GetMapping(value = "/welcome/comment.do")
 	public String openBoardWrite(Model model) {
 		String title = "제목";
 		String content = "내용";
@@ -67,6 +68,6 @@ public class WelcomeController {
 		model.addAttribute("c", content);
 		model.addAttribute("w", writer);
 
-		return "board/write";
+		return "comment";
 	}
 }
