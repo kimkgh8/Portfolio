@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
-<html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -50,7 +50,7 @@
 							<i class="demo-icon icon-git-squared"></i> <span class="i-name"><a
 								href="https://github.com/kimkgh8">https://github.com/kimkgh8</a></span>
 							<span class="i-code">0xf1d2</span>
-						</div>
+						</div>	
 					</div>
 					<div class="container footer">
 						developer by <span class="i-name">KIM GEUNHO</span>
