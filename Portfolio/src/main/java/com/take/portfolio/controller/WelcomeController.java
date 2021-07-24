@@ -6,7 +6,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.take.portfolio.dto.BoardDTO;
 import com.take.portfolio.service.BoardService;
 
 
@@ -59,15 +61,18 @@ public class WelcomeController {
 	//}
 	
 	@GetMapping(value = "/welcome/comment.do")
-	public String openBoardWrite(Model model) {
-		String title = "제목";
-		String content = "내용";
-		String writer = "홍길동";
-
-		model.addAttribute("t", title);
-		model.addAttribute("c", content);
-		model.addAttribute("w", writer);
+	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
+		if (idx == null) {
+			model.addAttribute("board", new BoardDTO());
+		} else {
+			BoardDTO comment = boardService.getBoardDetail(idx);
+			if (comment == null) {
+				return "redirect:/comment/list.do";
+			}
+			model.addAttribute("comment", comment);
+		}
 
 		return "comment";
+		
 	}
 }
