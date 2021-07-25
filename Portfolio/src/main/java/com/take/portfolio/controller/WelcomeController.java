@@ -60,7 +60,7 @@ public class WelcomeController {
 	//	return "comment";
 	//}
 	
-	@GetMapping(value = "/welcome/comment.do")
+	@GetMapping(value = "/welcome/comment")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
 
 		String title = "제목";
