@@ -62,17 +62,15 @@ public class WelcomeController {
 	
 	@GetMapping(value = "/welcome/comment.do")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
-		if (idx == null) {
-			model.addAttribute("board", new BoardDTO());
-		} else {
-			BoardDTO comment = boardService.getBoardDetail(idx);
-			if (comment == null) {
-				return "redirect:/comment/list.do";
-			}
-			model.addAttribute("comment", comment);
-		}
+
+		String title = "제목";
+		String content = "내용";
+		String writer = "홍길동";
+
+		model.addAttribute("t", title);
+		model.addAttribute("c", content);
+		model.addAttribute("w", writer);
 
 		return "comment";
-		
 	}
 }
