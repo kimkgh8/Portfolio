@@ -44,7 +44,7 @@
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
-								href="mailto:﻿" asdlkjd1@naver.com">asdlkjd1@naver.com</a></span> <span
+								href="mailto:﻿" asdlkjd1@naver.com>asdlkjd1@naver.com</a></span> <span
 								class="i-code">0xe800</span>
 						</div>
 						<div class="span3" title="Code: 0xf1d2">
@@ -119,7 +119,7 @@
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
-								href="mailto:﻿" asdlkjd1@naver.com">asdlkjd1@naver.com</a></span> <span
+								href="mailto:﻿" asdlkjd1@naver.com>asdlkjd1@naver.com</a></span> <span
 								class="i-code">0xe800</span>
 						</div>
 						<div class="span3" title="Code: 0xf1d2">
@@ -178,7 +178,7 @@
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
-								href="mailto:﻿" asdlkjd1@naver.com">asdlkjd1@naver.com</a></span> <span
+								href="mailto:﻿" asdlkjd1@naver.com>asdlkjd1@naver.com</a></span> <span
 								class="i-code">0xe800</span>
 						</div>
 						<div class="span3" title="Code: 0xf1d2">
@@ -235,7 +235,7 @@
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
-								href="mailto:﻿" asdlkjd1@naver.com">asdlkjd1@naver.com</a></span> <span
+								href="mailto:﻿" asdlkjd1@naver.com>asdlkjd1@naver.com</a></span> <span
 								class="i-code">0xe800</span>
 						</div>
 						<div class="span3" title="Code: 0xf1d2">

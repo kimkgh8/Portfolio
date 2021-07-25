@@ -16,7 +16,7 @@ import com.take.portfolio.service.BoardService;
 public class WelcomeController {
 	
 	@Autowired
-	private BoardService boardService;
+	//private BoardService boardService;
 	
 	@RequestMapping("/welcome")
 	public String welcome() {
@@ -60,9 +60,8 @@ public class WelcomeController {
 	//	return "comment";
 	//}
 	
-	@GetMapping(value = "/welcome/comment")
+	@RequestMapping("/welcome-thymeleaf.do")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
-
 		String title = "제목";
 		String content = "내용";
 		String writer = "홍길동";
@@ -71,6 +70,6 @@ public class WelcomeController {
 		model.addAttribute("c", content);
 		model.addAttribute("w", writer);
 
-		return "comment";
+		return "thymeleaf/comment";
 	}
 }
