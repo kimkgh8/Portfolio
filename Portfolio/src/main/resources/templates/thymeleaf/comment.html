@@ -1,4 +1,4 @@
-﻿<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+﻿<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -19,16 +19,33 @@
 	<script> 
 		AOS.init(); 
     </script>
-	<div data-aos="zoom-in" class="jb-content">
+	<	div data-aos="zoom-in" class="jb-content">
 		<div class="jb-container">
 			<div class="jb-header">
 				<h1>Comment</h1>
 			</div>
 			<div class="jb-main">
-				<h2>Welcome Spring Boot!</h2>
-				<span th:text="${t}">여기는 제목입니다.</span>
-				<span th:text="${c}">여기는 내용입니다.</span>
-				<span th:text="${w}">여기는 작성자입니다.</span>
+				<div class="row row-inline-block small-spacing">
+					<div class="col-xs-12">
+						<div class="box-content">
+							<div class="clearfix">
+								<h4 class="box-title pull-left"></h4>
+								<!-- /.box-title -->
+	
+								<th:block layout:fragment="search"></th:block>
+	
+							</div>
+							<!-- //.clearfix -->
+	
+							<th:block layout:fragment="content"></th:block>
+	
+							<th:block layout:fragment="paging"></th:block>
+						</div>
+						<!-- /.box-content -->
+						
+						<th:block layout:fragment="add-content"></th:block>
+
+					</div>
 			</div>
 			<div class="jb-footer">
 				<div class="container" id="icons">
