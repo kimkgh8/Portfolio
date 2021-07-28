@@ -1,4 +1,5 @@
-﻿<html lang="ko" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+﻿<html lang="ko" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 <head>
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -19,33 +20,118 @@
 	<script> 
 		AOS.init(); 
     </script>
-	<	div data-aos="zoom-in" class="jb-content">
-		<div class="jb-container">
-			<div class="jb-header">
-				<h1>Comment</h1>
-			</div>
-			<div class="jb-main">
-				<div class="row row-inline-block small-spacing">
-					<div class="col-xs-12">
-						<div class="box-content">
-							<div class="clearfix">
-								<h4 class="box-title pull-left"></h4>
-								<!-- /.box-title -->
-	
-								<th:block layout:fragment="search"></th:block>
-	
-							</div>
-							<!-- //.clearfix -->
-	
-							<th:block layout:fragment="content"></th:block>
-	
-							<th:block layout:fragment="paging"></th:block>
-						</div>
-						<!-- /.box-content -->
-						
-						<th:block layout:fragment="add-content"></th:block>
+	< div data-aos="zoom-in" class="jb-content">
+	<div class="jb-container">
+		<div class="jb-header">
+			<h1>Comment</h1>
+		</div>
+		<div class="jb-main">
+			<div class="row row-inline-block small-spacing">
+				<div class="col-xs-12">
+					<div class="box-content">
+						<div class="clearfix">
+							<h4 class="box-title pull-left"></h4>
+							<!-- /.box-title -->
 
+							<th:block layout:fragment="search"></th:block>
+
+						</div>
+						<!-- //.clearfix -->
+
+						<th:block layout:fragment="content">
+							<div class="card-content">
+								<form class="form-horizontal" th:action="@{/comment/register.do}"
+									th:object="${comment}" method="post"
+									onsubmit="return registerBoard(this)">
+									<!--/* update의 경우 서버로 전달할 게시글 번호 (PK) */-->
+									<input type="hidden" th:if="*{idx != null and idx > 0}"
+										th:field="*{idx}" />
+
+									<div class="form-group">
+										<label for="noticeYn" class="col-sm-2 control-label">공지글
+											설정</label>
+										<div class="col-sm-10" style="margin-top: 10px;">
+											<input type="checkbox" th:value="*{noticeYn}" id="noticeYn"
+												name="noticeYn"
+												th:checked="*{#strings.equals( noticeYn, 'Y' )}" />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="secretYn" class="col-sm-2 control-label">비밀글
+											설정</label>
+										<div class="col-sm-10" style="margin-top: 10px;">
+											<input type="checkbox" th:value="*{secretYn}" id="secretYn"
+												name="secretYn"
+												th:checked="*{#strings.equals( secretYn, 'Y' )}" />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="title" class="col-sm-2 control-label">제목</label>
+										<div class="col-sm-10">
+											<input type="text" th:field="*{title}" class="form-control"
+												placeholder="제목을 입력해 주세요." />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="writer" class="col-sm-2 control-label">이름</label>
+										<div class="col-sm-10">
+											<input type="text" th:field="*{writer}" class="form-control"
+												placeholder="이름을 입력해 주세요." />
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label for="content" class="col-sm-2 control-label">내용</label>
+										<div class="col-sm-10">
+											<textarea th:field="*{content}" class="form-control"
+												placeholder="내용을 입력해 주세요."></textarea>
+										</div>
+									</div>
+
+									<div class="btn_wrap text-center">
+										<a th:href="@{/comment/list.do}"
+											class="btn btn-default waves-effect waves-light">뒤로가기</a>
+										<button type="submit"
+											class="btn btn-primary waves-effect waves-light">저장하기</button>
+									</div>
+								</form>
+							</div>
+							<!-- /.card-content -->
+						</th:block>
+
+						<th:block layout:fragment="paging"></th:block>
 					</div>
+					<!-- /.box-content -->
+					<th:block layout:fragment="script">
+						<script th:inline="javascript">
+							/*<![CDATA[*/
+				
+							function registerBoard(form) {
+				
+								form.noticeYn.value = form.noticeYn.checked == false ? 'N' : 'Y';
+								form.secretYn.value = form.secretYn.checked == false ? 'N' : 'Y';
+				
+								var result = (
+										   isValid(form.title, "제목", null, null)
+										&& isValid(form.writer, "이름", null, null)
+										&& isValid(form.content, "내용", null, null)
+								);
+				
+								if ( result == false ) {
+									return false;
+								}
+							}
+							/*[- end of function -]*/
+				
+							/*]]>*/
+						</script>
+					</th:block>
+					<th:block layout:fragment="add-content"></th:block>
+
+				</div>
 			</div>
 			<div class="jb-footer">
 				<div class="container" id="icons">
@@ -54,14 +140,14 @@
 							<i class="demo-icon icon-user"></i> <span class="i-name"><a
 								href="index">Kim Geunho</a></span> <span class="i-code">0xe801</span>
 						</div>
-						
+
 						<div class="span3" title="Code: 0xe800">
-							<i class="demo-icon icon-mail"></i>
-							<span class="i-name"><a href="mailto:"asdlkjd1@naver.com>asdlkjd1@naver.com</a></span> 
-							<span class="i-code">0xe800</span>
-							
+							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
+								href="mailto:" asdlkjd1 @naver.com>asdlkjd1@naver.com</a></span> <span
+								class="i-code">0xe800</span>
+
 						</div>
-						
+
 						<div class="span3" title="Code: 0xf1d2">
 							<i class="demo-icon icon-git-squared"></i> <span class="i-name"><a
 								href="https://github.com/kimkgh8">https://github.com/kimkgh8</a></span>
