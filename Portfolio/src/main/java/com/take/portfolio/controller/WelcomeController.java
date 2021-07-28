@@ -1,6 +1,8 @@
 package com.take.portfolio.controller;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
@@ -66,18 +68,20 @@ public class WelcomeController {
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
-		} else {
-			BoardDTO comment = boardService.getBoardDetail(idx);
-			if (comment == null) {
-				return "redirect:/comment/list.do";
-			}
-			model.addAttribute("comment", comment);
+		} 
+		BoardDTO comment = boardService.getBoardDetail(idx);
+		List<BoardDTO> boardList = boardService.getBoardList();
+		model.addAttribute("boardList", boardList);
+		if (comment == null) {
+			return "redirect:/comment/list.do";
 		}
+		model.addAttribute("comment", comment);
+	
 
 		return "thymeleaf/comment";
 	}
 	
-	@PostMapping(value = "/welcome/register.do")
+	@PostMapping(value = "/comment/register.do")
 	public String registerBoard(final BoardDTO params) {
 		try {
 			boolean isRegistered = boardService.registerBoard(params);
@@ -91,6 +95,13 @@ public class WelcomeController {
 			// TODO => 시스템에 문제가 발생하였다는 메시지를 전달
 		}
 
-		return "redirect:/comment/list.do";
+		return "redirect:thymeleaf/comment";
+	}
+	@GetMapping(value = "/comment/list.do")
+	public String openBoardList(Model model) {
+		List<BoardDTO> boardList = boardService.getBoardList();
+		model.addAttribute("boardList", boardList);
+
+		return "thymeleaf/comment";
 	}
 }
