@@ -72,9 +72,9 @@ public class WelcomeController {
 		BoardDTO comment = boardService.getBoardDetail(idx);
 		List<BoardDTO> boardList = boardService.getBoardList();
 		model.addAttribute("boardList", boardList);
-		if (comment == null) {
-			return "redirect:/comment/list.do";
-		}
+		//if (comment == null) {
+		//	return "redirect:/comment/list.do";
+		//}
 		model.addAttribute("comment", comment);
 	
 
