@@ -3,6 +3,8 @@ package com.take.portfolio.controller;
 
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
@@ -18,7 +20,8 @@ import com.take.portfolio.service.BoardService;
 
 @Controller
 public class WelcomeController {
-	
+	private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
 	@Autowired
 	private BoardService boardService;
 	
@@ -66,6 +69,7 @@ public class WelcomeController {
 	
 	@GetMapping(value = "/welcome-thymeleaf.do")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
+		logger.debug("debug -- Hello world.");
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
 		} 
@@ -80,7 +84,6 @@ public class WelcomeController {
 
 		return "thymeleaf/comment";
 	}
-	
 	@PostMapping(value = "/comment/register.do")
 	public String registerBoard(final BoardDTO params) {
 		try {
@@ -97,11 +100,12 @@ public class WelcomeController {
 
 		return "redirect:thymeleaf/comment";
 	}
+	/*
 	@GetMapping(value = "/comment/list.do")
 	public String openBoardList(Model model) {
 		List<BoardDTO> boardList = boardService.getBoardList();
 		model.addAttribute("boardList", boardList);
 
 		return "thymeleaf/comment";
-	}
+	}*/
 }
