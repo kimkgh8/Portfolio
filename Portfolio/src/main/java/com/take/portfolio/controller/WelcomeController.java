@@ -71,6 +71,15 @@ public class WelcomeController {
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
+			BoardDTO comment = boardService.getBoardDetail(idx);
+			List<BoardDTO> boardList = boardService.getBoardList();
+			model.addAttribute("boardList", boardList);
+			//if (comment == null) {
+			//	return "redirect:/comment/list.do";
+			//}
+			if (comment != null){
+				model.addAttribute("comment", comment);
+			}
 		} else {
 			BoardDTO comment = boardService.getBoardDetail(idx);
 			List<BoardDTO> boardList = boardService.getBoardList();
@@ -100,7 +109,7 @@ public class WelcomeController {
 			// TODO => 시스템에 문제가 발생하였다는 메시지를 전달
 		}
 
-		return "redirect:thymeleaf/comment";
+		return "thymeleaf/comment";
 	}
 	/*
 	@GetMapping(value = "/comment/list.do")
