@@ -67,20 +67,22 @@ public class WelcomeController {
 	//	return "comment";
 	//}
 	
-	@GetMapping(value = "/welcome-thymeleaf.do")
+	@GetMapping(value = "/comment")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
-		logger.debug("debug -- Hello world.");
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
-		} 
-		BoardDTO comment = boardService.getBoardDetail(idx);
-		List<BoardDTO> boardList = boardService.getBoardList();
-		model.addAttribute("boardList", boardList);
-		//if (comment == null) {
-		//	return "redirect:/comment/list.do";
-		//}
-		model.addAttribute("comment", comment);
-	
+		} else {
+			BoardDTO comment = boardService.getBoardDetail(idx);
+			List<BoardDTO> boardList = boardService.getBoardList();
+			model.addAttribute("boardList", boardList);
+			//if (comment == null) {
+			//	return "redirect:/comment/list.do";
+			//}
+			if (comment != null){
+				model.addAttribute("comment", comment);
+			}
+			
+		}
 
 		return "thymeleaf/comment";
 	}
