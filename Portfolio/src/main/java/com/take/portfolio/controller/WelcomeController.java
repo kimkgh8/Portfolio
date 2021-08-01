@@ -80,6 +80,7 @@ public class WelcomeController {
 			if (comment != null){
 				model.addAttribute("comment", comment);
 			}
+			logger.debug("idx is NULL");
 		} else {
 			BoardDTO comment = boardService.getBoardDetail(idx);
 			List<BoardDTO> boardList = boardService.getBoardList();
@@ -90,7 +91,7 @@ public class WelcomeController {
 			if (comment != null){
 				model.addAttribute("comment", comment);
 			}
-			
+			logger.debug("idx is NOT NULL");
 		}
 
 		return "thymeleaf/comment";
