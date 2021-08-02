@@ -59,13 +59,9 @@
 
 
 									<div class="form-group">
-										<label for="title" class="col-sm-2 control-label">제목</label> <input
-											type="text" th:field="*{title}" class="form-control"
-											placeholder="제목을 입력해 주세요." /> <label for="writer"
-											class="col-sm-2 control-label">이름</label> <input type="text"
-											th:field="*{writer}" class="form-control"
-											placeholder="이름을 입력해 주세요." />
-									</div>
+										<label for="title" class="col-sm-2 control-label">작성자</label>
+										<input type="text" th:field="*{writer}" class="form-control" /> 
+									</div><br/>
 
 									<div class="form-group">
 										<label for="content" class="col-sm-2 control-label">내용</label>
@@ -75,17 +71,14 @@
 										</div>
 									</div>
 									<div class="form-group">
-										<label for="secretYn" class="col-sm-2 control-label">비밀글
-											설정</label> <input type="checkbox" th:value="*{secretYn}"
-											id="secretYn" name="secretYn"
-											th:checked="*{#strings.equals( secretYn, 'Y' )}" />
+										<label for="secretYn" class="col-sm-2 control-label">비밀글 설정</label> 
+										<input type="checkbox" th:value="*{secretYn}" id="secretYn" name="secretYn" th:checked="*{#strings.equals( secretYn, 'Y' )}" />
 									</div>
 
 									<div class="btn_wrap text-center">
-										<a th:href="@{/comment/list.do}"
-											class="btn btn-default waves-effect waves-light">뒤로가기</a>
+										<a th:href="@{/comment/list.do}" class="snip1535">뒤로</a>
 										<button type="submit"
-											class="btn btn-primary waves-effect waves-light">저장하기</button>
+											class="snip1535">남기기</button>
 									</div>
 								</form>
 							</div>
@@ -95,11 +88,11 @@
 								<table class="table table-hover">
 									<thead>
 										<tr>
-											<th>번호</th>
-											<th>제목</th>
+											<th>No.</th>
 											<th>작성자</th>
+											<th>내용</th>
 											<th>등록일</th>
-											<th>조회 수</th>
+											<th>좋아요</th>
 										</tr>
 									</thead>
 									<tbody>
@@ -120,11 +113,6 @@
 										</tr>
 									</tbody>
 								</table>
-
-								<div class="btn_wrap text-right">
-									<a th:href="@{/board/write.do}"
-										class="btn btn-primary waves-effect waves-light">Write</a>
-								</div>
 
 								<th:block layout:fragment="paging">
 									<nav aria-label="Page navigation" class="text-center">
@@ -171,6 +159,12 @@
 							/*[- end of function -]*/
 				
 							/*]]>*/
+							
+							$(".hover").mouseleave(
+							  function() {
+							    $(this).removeClass("hover");
+							  }
+							);
 						</script>
 					</th:block>
 					<th:block layout:fragment="add-content"></th:block>
