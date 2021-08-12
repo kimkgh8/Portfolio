@@ -48,10 +48,10 @@ public class WelcomeController {
 	}
 	
 	//@RequestMapping("/welcome/index/project/projectName/coment")
-	@RequestMapping("/welcome/coment")
-	public String coment() {
-		return "coment";
-	}
+	//@RequestMapping("/welcome/coment")
+	//public String coment() {
+	//	return "coment";
+	//}
 	
 	@RequestMapping("/ex")
 	public String ex() {
@@ -67,7 +67,7 @@ public class WelcomeController {
 	//	return "comment";
 	//}
 	
-	@GetMapping(value = "/comment")
+	@GetMapping(value = "/welcome/comment")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
@@ -96,7 +96,7 @@ public class WelcomeController {
 
 		return "thymeleaf/comment";
 	}
-	@PostMapping(value = "/comment/register.do")
+	@PostMapping(value = "/welcome/comment/register.do")
 	public String registerBoard(final BoardDTO params) {
 		try {
 			boolean isRegistered = boardService.registerBoard(params);

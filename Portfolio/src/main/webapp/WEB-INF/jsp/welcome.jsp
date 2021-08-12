@@ -40,7 +40,7 @@
 					<div class="row">
 						<div class="span3" title="Code: 0xe801">
 							<i class="demo-icon icon-user"></i> <span class="i-name"><a
-								href="index">Kim Geunho</a></span> <span class="i-code">0xe801</span>
+								href="comment">Kim Geunho</a></span> <span class="i-code">0xe801</span>
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
@@ -115,7 +115,7 @@
 					<div class="row">
 						<div class="span3" title="Code: 0xe801">
 							<i class="demo-icon icon-user"></i> <span class="i-name"><a
-								href="index">Kim Geunho</a></span> <span class="i-code">0xe801</span>
+								href="comment">Kim Geunho</a></span> <span class="i-code">0xe801</span>
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
@@ -174,7 +174,7 @@
 					<div class="row">
 						<div class="span3" title="Code: 0xe801">
 							<i class="demo-icon icon-user"></i> <span class="i-name"><a
-								href="index">Kim Geunho</a></span> <span class="i-code">0xe801</span>
+								href="comment">Kim Geunho</a></span> <span class="i-code">0xe801</span>
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
@@ -231,7 +231,7 @@
 					<div class="row">
 						<div class="span3" title="Code: 0xe801">
 							<i class="demo-icon icon-user"></i> <span class="i-name"><a
-								href="index">Kim Geunho</a></span> <span class="i-code">0xe801</span>
+								href="comment">Kim Geunho</a></span> <span class="i-code">0xe801</span>
 						</div>
 						<div class="span3" title="Code: 0xe800">
 							<i class="demo-icon icon-mail"></i> <span class="i-name"><a
