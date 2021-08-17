@@ -13,6 +13,10 @@ a {
 	border-radius: 5px;
 }
 
+.pagination {
+	list-style:none;
+	font-size: 12px;
+}
 .jb-main li {
 	font-size: 16px;
 	font-weight: 5px;
