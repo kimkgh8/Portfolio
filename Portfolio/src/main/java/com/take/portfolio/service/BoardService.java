@@ -3,6 +3,7 @@ package com.take.portfolio.service;
 import java.util.List;
 
 import com.take.portfolio.dto.BoardDTO;
+import com.take.portfolio.paging.Criteria;
 
 public interface BoardService {
 
@@ -12,6 +13,6 @@ public interface BoardService {
 
 	public boolean deleteBoard(Long idx);
 
-	public List<BoardDTO> getBoardList();
+	public List<BoardDTO> getBoardList(Criteria criteria);
 
 }

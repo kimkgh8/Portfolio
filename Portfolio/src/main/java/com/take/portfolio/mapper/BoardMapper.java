@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.take.portfolio.dto.BoardDTO;
+import com.take.portfolio.paging.Criteria;
 
 @Mapper
 public interface BoardMapper {
@@ -19,4 +20,8 @@ public interface BoardMapper {
 	public List<BoardDTO> selectBoardList();
 
 	public int selectBoardTotalCount();
+	
+	public List<BoardDTO> selectBoardList(Criteria criteria);
+
+	public int selectBoardTotalCount(Criteria criteria);
 }
