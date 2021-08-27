@@ -10,11 +10,13 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.take.portfolio.dto.BoardDTO;
+import com.take.portfolio.paging.Criteria;
 import com.take.portfolio.service.BoardService;
 
 
@@ -68,11 +70,11 @@ public class WelcomeController {
 	//}
 	
 	@GetMapping(value = "/welcome/comment")
-	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx, Model model) {
+	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx,@ModelAttribute("criteria") Criteria criteria, Model model) {
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
 			BoardDTO comment = boardService.getBoardDetail(idx);
-			List<BoardDTO> boardList = boardService.getBoardList();
+			List<BoardDTO> boardList = boardService.getBoardList(criteria);
 			model.addAttribute("boardList", boardList);
 			//if (comment == null) {
 			//	return "redirect:/comment/list.do";
@@ -83,7 +85,7 @@ public class WelcomeController {
 			logger.debug("idx is NULL");
 		} else {
 			BoardDTO comment = boardService.getBoardDetail(idx);
-			List<BoardDTO> boardList = boardService.getBoardList();
+			List<BoardDTO> boardList = boardService.getBoardList(criteria);
 			model.addAttribute("boardList", boardList);
 			//if (comment == null) {
 			//	return "redirect:/comment/list.do";
