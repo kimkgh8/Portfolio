@@ -33,21 +33,6 @@ public class BoardDTO {
 	/** 삭제 여부 */
 	private String deleteYn;
 
-	/** 등록일 */
-	@JsonSerialize(using = LocalDateTimeSerializer.class)
-	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
-	private LocalDateTime insertTime;
-
-	/** 수정일 */
-	@JsonSerialize(using = LocalDateTimeSerializer.class)
-	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
-	private LocalDateTime updateTime;
-
-	/** 삭제일 */
-	@JsonSerialize(using = LocalDateTimeSerializer.class)
-	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
-	private LocalDateTime deleteTime;
-
 	public Long getIdx() {
 		return idx;
 	}
@@ -112,28 +97,5 @@ public class BoardDTO {
 		this.deleteYn = deleteYn;
 	}
 
-	public LocalDateTime getInsertTime() {
-		return insertTime;
-	}
-
-	public void setInsertTime(LocalDateTime insertTime) {
-		this.insertTime = insertTime;
-	}
-
-	public LocalDateTime getUpdateTime() {
-		return updateTime;
-	}
-
-	public void setUpdateTime(LocalDateTime updateTime) {
-		this.updateTime = updateTime;
-	}
-
-	public LocalDateTime getDeleteTime() {
-		return deleteTime;
-	}
-
-	public void setDeleteTime(LocalDateTime deleteTime) {
-		this.deleteTime = deleteTime;
-	}
 
 }

@@ -70,11 +70,11 @@ public class WelcomeController {
 	//}
 	
 	@GetMapping(value = "/welcome/comment")
-	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx,@ModelAttribute("criteria") Criteria criteria, Model model) {
+	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx,@ModelAttribute("params") BoardDTO params, Model model) {
 		if (idx == null) {
 			model.addAttribute("comment", new BoardDTO());
 			BoardDTO comment = boardService.getBoardDetail(idx);
-			List<BoardDTO> boardList = boardService.getBoardList(criteria);
+			List<BoardDTO> boardList = boardService.getBoardList(params);
 			model.addAttribute("boardList", boardList);
 			//if (comment == null) {
 			//	return "redirect:/comment/list.do";
@@ -85,7 +85,7 @@ public class WelcomeController {
 			logger.debug("idx is NULL");
 		} else {
 			BoardDTO comment = boardService.getBoardDetail(idx);
-			List<BoardDTO> boardList = boardService.getBoardList(criteria);
+			List<BoardDTO> boardList = boardService.getBoardList(params);
 			model.addAttribute("boardList", boardList);
 			//if (comment == null) {
 			//	return "redirect:/comment/list.do";
