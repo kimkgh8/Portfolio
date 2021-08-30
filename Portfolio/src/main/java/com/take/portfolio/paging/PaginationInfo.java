@@ -1,7 +1,5 @@
 package com.take.portfolio.paging;
 
-import com.take.portfolio.dto.BoardDTO;
-
 public class PaginationInfo {
 
 	/** 페이징 계산에 필요한 파라미터들이 담긴 클래스 */
@@ -31,7 +29,7 @@ public class PaginationInfo {
 	/** 다음 페이지 존재 여부 */
 	private boolean hasNextPage;
 
-	public PaginationInfo(BoardDTO params) {
+	public PaginationInfo(Criteria criteria) {
 		if (criteria.getCurrentPageNo() < 1) {
 			criteria.setCurrentPageNo(1);
 		}
@@ -44,7 +42,6 @@ public class PaginationInfo {
 
 		this.criteria = criteria;
 	}
-
 	public void setTotalRecordCount(int totalRecordCount) {
 		this.totalRecordCount = totalRecordCount;
 

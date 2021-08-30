@@ -2,9 +2,10 @@ package com.take.portfolio.dto;
 
 import java.time.LocalDateTime;
 
+import com.take.portfolio.paging.Criteria;
 import com.take.portfolio.paging.PaginationInfo;
 
-public class CommonDTO {
+public class CommonDTO extends Criteria {
 
 	/** 페이징 정보 */
 	private PaginationInfo paginationInfo;
