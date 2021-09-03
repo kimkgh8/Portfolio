@@ -1,5 +1,8 @@
 package com.take.portfolio.paging;
 
+import org.springframework.web.util.UriComponents;
+import org.springframework.web.util.UriComponentsBuilder;
+
 public class Criteria {
 	/** 현재 페이지 번호 */
 	private int currentPageNo;
@@ -64,5 +67,19 @@ public class Criteria {
 
 	public int getStartPage() {
 		return (currentPageNo - 1) * recordsPerPage;
+	}
+	
+	public String makeQueryString(int pageNo) {
+
+		UriComponents uriComponents = UriComponentsBuilder.newInstance()
+				.queryParam("currentPageNo", pageNo)
+				.queryParam("recordsPerPage", recordsPerPage)
+				.queryParam("pageSize", pageSize)
+				.queryParam("searchType", searchType)
+				.queryParam("searchKeyword", searchKeyword)
+				.build()
+				.encode();
+
+		return uriComponents.toUriString();
 	}
 }

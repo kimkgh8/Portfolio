@@ -23,9 +23,6 @@ public class BoardDTO extends CommonDTO{
 	/** 비밀 여부 */
 	private String secretYn;
 
-	/** 삭제 여부 */
-	private String deleteYn;
-
 	public Long getIdx() {
 		return idx;
 	}
@@ -81,14 +78,5 @@ public class BoardDTO extends CommonDTO{
 	public void setSecretYn(String secretYn) {
 		this.secretYn = secretYn;
 	}
-
-	public String getDeleteYn() {
-		return deleteYn;
-	}
-
-	public void setDeleteYn(String deleteYn) {
-		this.deleteYn = deleteYn;
-	}
-
 
 }

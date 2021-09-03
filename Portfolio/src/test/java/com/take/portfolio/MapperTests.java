@@ -23,7 +23,9 @@ public class MapperTests {
 		params.setTitle("1번 게시글 제목");
 		params.setContent("1번 게시글 내용");
 		params.setWriter("테스터");
-
+		if (boardMapper == null) {
+			System.out.println("Mapper IS NULL");
+		}
 		int result = boardMapper.insertBoard(params);
 		System.out.println("결과는 " + result + "입니다.");
 	}
@@ -55,9 +57,13 @@ public class MapperTests {
 	
 	@Test
 	public void testSelectList() {
-		int boardTotalCount = boardMapper.selectBoardTotalCount();
+		BoardDTO boardDTO = new BoardDTO();
+		boardDTO.setTitle("1번 게시글 제목");
+		boardDTO.setContent("1번 게시글 내용");
+		boardDTO.setWriter("테스터");
+		int boardTotalCount = boardMapper.selectBoardTotalCount(boardDTO);
 		if (boardTotalCount > 0) {
-			List<BoardDTO> boardList = boardMapper.selectBoardList();
+			List<BoardDTO> boardList = boardMapper.selectBoardList(boardDTO);
 			if (CollectionUtils.isEmpty(boardList) == false) {
 				for (BoardDTO board : boardList) {
 					System.out.println("=========================");

@@ -5,7 +5,6 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import com.take.portfolio.dto.BoardDTO;
-import com.take.portfolio.paging.Criteria;
 
 @Mapper
 public interface BoardMapper {
