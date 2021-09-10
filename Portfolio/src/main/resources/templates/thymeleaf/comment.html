@@ -141,15 +141,15 @@
 
 
 										<div class="form-group">
-											<label for="title" class="col-sm-2 control-label">작성자</label>
-											<input type="text" th:field="*{writer}" class="form-control" />
+											<label for="title" class="col-sm-2 control-label">이름</label>
+											<input type="text" th:field="*{writer}" class="form-control-name" />
 										</div>
 										<br />
 
 										<div class="form-group">
 											<label for="content" class="col-sm-2 control-label">내용</label>
 											<div class="col-sm-10">
-												<textarea th:field="*{content}" class="form-control"
+												<textarea th:field="*{content}" class="form-control-text"
 													placeholder="내용을 입력해 주세요."></textarea>
 											</div>
 										</div>
@@ -161,7 +161,7 @@
 										</div>
 
 										<div class="btn_wrap text-center">
-											<a th:href="@{/comment/list.do}" class="snip1535">뒤로</a>
+											<!-- <a th:href="@{/comment/list.do}" class="snip1535">뒤로</a> -->
 											<button type="submit" class="snip1535">남기기</button>
 										</div>
 									</form>
@@ -169,7 +169,7 @@
 								<!-- /.card-content -->
 
 								<div class="table-responsive clearfix">
-									<table class="table table-hover">
+									<table class="form-control-table">
 										<thead>
 											<tr>
 												<th>No.</th>

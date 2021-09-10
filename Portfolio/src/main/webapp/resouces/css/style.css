@@ -173,10 +173,9 @@ a {
   cursor: pointer;
   display: inline-block;
   font-family: 'BenchNine', Arial, sans-serif;
-  font-size: 1em;
   font-size: 15px;
   line-height: 1em;
-  margin: 15px 40px;
+  margin: 15px 5px;
   outline: none;
   padding:8px 20px 8px;
   position: relative;
@@ -219,4 +218,20 @@ a {
 .snip1535.hover:after {
   height: 100%;
   width: 100%;
+}
+
+.form-control-text {
+	width:500px; 
+	height:100px; 
+    resize:none;
+}
+
+.form-control-table{
+	width: 100%;
+}
+.form-control-table th, td{
+	padding: 10px; border-bottom: 1px solid #CD5C5C;
+}
+.form-control-table tr:hover {
+	background-color: #F5F5F5; 
 }
