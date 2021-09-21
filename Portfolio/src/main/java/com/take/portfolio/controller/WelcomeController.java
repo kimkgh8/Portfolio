@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.take.portfolio.Method.Method;
 import com.take.portfolio.dto.BoardDTO;
-import com.take.portfolio.paging.Criteria;
 import com.take.portfolio.service.BoardService;
 
 
@@ -82,7 +82,7 @@ public class WelcomeController {
 			if (comment != null){
 				model.addAttribute("comment", comment);
 			}
-			logger.debug("idx is NULL");
+			//logger.debug("idx is NULL");
 		} else {
 			BoardDTO comment = boardService.getBoardDetail(idx);
 			List<BoardDTO> boardList = boardService.getBoardList(params);
@@ -93,26 +93,26 @@ public class WelcomeController {
 			if (comment != null){
 				model.addAttribute("comment", comment);
 			}
-			logger.debug("idx is NOT NULL");
+			//logger.debug("idx is NOT NULL");
 		}
 
 		return "thymeleaf/comment";
 	}
 	@PostMapping(value = "/welcome/comment/register.do")
-	public String registerBoard(final BoardDTO params) {
+	public String registerBoard(final BoardDTO params, Model model) {
 		try {
 			boolean isRegistered = boardService.registerBoard(params);
 			if (isRegistered == false) {
-				// TODO => 게시글 등록에 실패하였다는 메시지를 전달
+				return showMessageWithRedirect("게시글 등록에 실패하였습니다.", "/board/list.do", Method.GET, null, model);
 			}
 		} catch (DataAccessException e) {
-			// TODO => 데이터베이스 처리 과정에 문제가 발생하였다는 메시지를 전달
+			return showMessageWithRedirect("데이터베이스 처리 과정에 문제가 발생하였습니다.", "/board/list.do", Method.GET, null, model);
 
 		} catch (Exception e) {
-			// TODO => 시스템에 문제가 발생하였다는 메시지를 전달
+			return showMessageWithRedirect("시스템에 문제가 발생하였습니다.", "/board/list.do", Method.GET, null, model);
 		}
 
-		return "thymeleaf/comment";
+		return showMessageWithRedirect("게시글 등록이 완료되었습니다.", "thymeleaf/comment", Method.GET, null, model);
 	}
 	/*
 	@GetMapping(value = "/comment/list.do")

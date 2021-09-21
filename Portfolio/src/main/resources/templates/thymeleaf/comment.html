@@ -112,11 +112,11 @@
 							<th:block layout:fragment="content">
 								<div class="card-content">
 									<form class="form-horizontal"
-										th:action="@{/comment/register.do}" th:object="${comment}"
+										th:action="@{/welcome/comment/register.do}" th:object="${comment}"
 										method="post" onsubmit="return registerBoard(this)">
 										<!--/* update의 경우 서버로 전달할 게시글 번호 (PK) */-->
-										<input type="hidden" th:if="*{idx != null and idx > 0}"
-											th:field="*{idx}" />
+										<!--<input type="hidden" th:if="*{idx != null and idx > 0}"
+											th:field="*{idx}" /> -->
 										<!--
 										<div class="form-group">
 											<label for="noticeYn" class="col-sm-2 control-label">공지글
