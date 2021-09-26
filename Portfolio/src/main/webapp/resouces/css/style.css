@@ -16,6 +16,7 @@ a {
 .pagination {
 	list-style:none;
 	font-size: 12px;
+	text-decoration: underline;
 }
 .jb-main li {
 	font-size: 16px;
