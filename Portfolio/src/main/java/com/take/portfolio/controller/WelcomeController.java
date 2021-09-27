@@ -99,9 +99,11 @@ public class WelcomeController {
 		return "thymeleaf/comment";
 	}
 	@PostMapping(value = "/welcome/comment/register.do")
-	public String registerBoard(final BoardDTO params, Model model) {
+	public String registerBoard(@RequestParam(value = "idx", required = false) Long idx,@ModelAttribute("params") BoardDTO params, Model model) {
 		try {
 			boolean isRegistered = boardService.registerBoard(params);
+			model.addAttribute("comment", new BoardDTO());
+			logger.debug("TEST.");
 			if (isRegistered == false) {
 				logger.debug("게시글 등록에 실패하였습니다.");
 				//return showMessageWithRedirect("게시글 등록에 실패하였습니다.", "/board/list.do", Method.GET, null, model);
@@ -116,6 +118,7 @@ public class WelcomeController {
 		}
 
 		//return showMessageWithRedirect("게시글 등록이 완료되었습니다.", "thymeleaf/comment", Method.GET, null, model);
+		//return "thymeleaf/comment";
 		return "thymeleaf/comment";
 	}
 	/*

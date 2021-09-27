@@ -3,7 +3,6 @@
 <mapper namespace="com.take.portfolio.mapper.BoardMapper">
 <sql id="boardColumns">
 		  idx
-		, title
 		, content
 		, writer
 		, view_cnt
@@ -20,7 +19,6 @@
 			<include refid="boardColumns" />
 		) VALUES (
 			  #{idx}
-			, #{title}
 			, #{content}
 			, #{writer}
 			, 0
@@ -48,7 +46,6 @@
 		UPDATE tb_board
 		SET
 			  update_time = NOW()
-			, title = #{title}
 			, content = #{content}
 			, writer = #{writer}
 			, notice_yn = IFNULL(#{noticeYn}, 'N')

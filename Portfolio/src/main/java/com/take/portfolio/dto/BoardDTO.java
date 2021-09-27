@@ -5,9 +5,6 @@ public class BoardDTO extends CommonDTO{
 	/** 번호 (PK) */
 	private Long idx;
 
-	/** 제목 */
-	private String title;
-
 	/** 내용 */
 	private String content;
 
@@ -29,14 +26,6 @@ public class BoardDTO extends CommonDTO{
 
 	public void setIdx(Long idx) {
 		this.idx = idx;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
 	}
 
 	public String getContent() {

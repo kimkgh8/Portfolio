@@ -20,7 +20,6 @@ public class MapperTests {
 	@Test
 	public void testOfInsert() {
 		BoardDTO params = new BoardDTO();
-		params.setTitle("1번 게시글 제목");
 		params.setContent("1번 게시글 내용");
 		params.setWriter("테스터");
 		if (boardMapper == null) {
@@ -48,7 +47,6 @@ public class MapperTests {
 	public void testMultipleInsert() {
 		for (int i = 2; i <= 50; i++) {
 			BoardDTO params = new BoardDTO();
-			params.setTitle(i + "번 게시글 제목");
 			params.setContent(i + "번 게시글 내용");
 			params.setWriter(i + "번 게시글 작성자");
 			boardMapper.insertBoard(params);
@@ -58,7 +56,6 @@ public class MapperTests {
 	@Test
 	public void testSelectList() {
 		BoardDTO boardDTO = new BoardDTO();
-		boardDTO.setTitle("1번 게시글 제목");
 		boardDTO.setContent("1번 게시글 내용");
 		boardDTO.setWriter("테스터");
 		int boardTotalCount = boardMapper.selectBoardTotalCount(boardDTO);
@@ -67,7 +64,6 @@ public class MapperTests {
 			if (CollectionUtils.isEmpty(boardList) == false) {
 				for (BoardDTO board : boardList) {
 					System.out.println("=========================");
-					System.out.println(board.getTitle());
 					System.out.println(board.getContent());
 					System.out.println(board.getWriter());
 					System.out.println("=========================");
