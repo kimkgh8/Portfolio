@@ -72,6 +72,7 @@ public class WelcomeController {
 	@GetMapping(value = "/welcome/comment")
 	public String openBoardWrite(@RequestParam(value = "idx", required = false) Long idx,@ModelAttribute("params") BoardDTO params, Model model) {
 		if (idx == null) {
+			logger.debug("TEST1.");
 			model.addAttribute("comment", new BoardDTO());
 			BoardDTO comment = boardService.getBoardDetail(idx);
 			List<BoardDTO> boardList = boardService.getBoardList(params);
@@ -84,6 +85,7 @@ public class WelcomeController {
 			}
 			//logger.debug("idx is NULL");
 		} else {
+			logger.debug("TEST2.");
 			BoardDTO comment = boardService.getBoardDetail(idx);
 			List<BoardDTO> boardList = boardService.getBoardList(params);
 			model.addAttribute("boardList", boardList);
@@ -104,6 +106,12 @@ public class WelcomeController {
 			boolean isRegistered = boardService.registerBoard(params);
 			model.addAttribute("comment", new BoardDTO());
 			logger.debug("TEST.");
+			BoardDTO comment = boardService.getBoardDetail(idx);
+			List<BoardDTO> boardList = boardService.getBoardList(params);
+			model.addAttribute("boardList", boardList);
+			if (comment != null){
+				model.addAttribute("comment", comment);
+			}
 			if (isRegistered == false) {
 				logger.debug("게시글 등록에 실패하였습니다.");
 				//return showMessageWithRedirect("게시글 등록에 실패하였습니다.", "/board/list.do", Method.GET, null, model);
