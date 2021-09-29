@@ -173,7 +173,7 @@
 										<tbody>
 											<tr th:if="${not #lists.isEmpty( boardList )}"
 												th:each="row : ${boardList}">
-												<td scope="row"
+												<td width = 5px scope="row"
 													th:text="${#strings.equals( row.noticeYn, 'Y' ) ? '공지' : row.idx}"></td>
 												<td th:text="${row.writer}"></td>
 												<td th:text="${row.content}"></td>

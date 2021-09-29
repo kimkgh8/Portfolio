@@ -228,11 +228,28 @@ a {
 }
 
 .form-control-table{
-	width: 100%;
+  border-collapse: separate;
+  border-spacing: 1px;
+  text-align: left;
+  line-height: 1.5;
+  border-top: 1px solid #ccc;
+  margin : 20px 10px;
 }
-.form-control-table th, td{
-	padding: 10px; border-bottom: 1px solid #CD5C5C;
+.form-control-table th{
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
 }
+
+.form-control-table td{
+  width: 350px;
+  padding: 10px;
+  vertical-align: top;
+  border-bottom: 1px solid #ccc;
+}
+
 .form-control-table tr:hover {
 	background-color: #F5F5F5; 
 }
