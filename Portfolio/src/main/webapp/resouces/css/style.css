@@ -13,6 +13,15 @@ a {
 	border-radius: 5px;
 }
 
+.jb-dataFlowImg {
+	vertical-align: middle;
+	border-style: none;
+	width: 600px;
+	height: auto;
+	border-radius: 5px;
+}
+
+
 .pagination {
 	list-style:none;
 	font-size: 12px;
