@@ -21,12 +21,18 @@ a {
 	border-radius: 5px;
 }
 
-
-.pagination {
-	list-style:none;
+.pagination a {
 	font-size: 12px;
+	color: blue;
 	text-decoration: underline;
 }
+
+.pagination li{
+	padding: 4px;
+	float: left;
+	list-style: none;
+}
+
 .jb-main li {
 	font-size: 16px;
 	font-weight: 5px;
@@ -68,12 +74,9 @@ a {
 	margin: 10px auto;
 	padding: 20px;
 	border: 0px solid #bcbcbc;
-	margin: 10px auto
 }
 
 .jb-header {
-	padding: 20px;
-	margin-bottom: 20px;
 	border: none;
 }
 
@@ -88,7 +91,6 @@ a {
 
 .jb-footer {
 	clear: both;
-	padding: 20px;
 	border: none;
 }
 
@@ -245,7 +247,6 @@ a {
   margin : 20px 10px;
 }
 .form-control-table th{
-  width: 150px;
   padding: 10px;
   font-weight: bold;
   vertical-align: top;
@@ -253,7 +254,6 @@ a {
 }
 
 .form-control-table td{
-  width: 350px;
   padding: 10px;
   vertical-align: top;
   border-bottom: 1px solid #ccc;

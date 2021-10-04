@@ -34,10 +34,10 @@ public class PaginationInfo {
 			criteria.setCurrentPageNo(1);
 		}
 		if (criteria.getRecordsPerPage() < 1 || criteria.getRecordsPerPage() > 100) {
-			criteria.setRecordsPerPage(10);
+			criteria.setRecordsPerPage(5);
 		}
 		if (criteria.getPageSize() < 5 || criteria.getPageSize() > 20) {
-			criteria.setPageSize(10);
+			criteria.setPageSize(5);
 		}
 
 		this.criteria = criteria;
